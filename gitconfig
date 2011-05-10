@@ -27,6 +27,7 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+
 [user]
 	name = Lucas Martin-King
 	email = lmartinking@gmail.com
