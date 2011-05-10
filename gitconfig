@@ -1,0 +1,32 @@
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 832x564+633+400
+	main-window-view = HistoryView
+	history-view-vpane-position = 218
+	file-view-vpane-position = 232
+
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[user]
+	name = Lucas Martin-King
+	email = lmartinking@gmail.com
