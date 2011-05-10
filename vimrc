@@ -10,8 +10,6 @@ noremap! <LeftDrag> <LeftMouse>
 "set ttymouse=xterm2
 "set ttymouse=xterm
 
-
-
 set title
 
 " Should be set before Colour Scheme
@@ -21,6 +19,7 @@ syntax on
 colorscheme desert256
 hi Normal ctermfg=251 ctermbg=234
 
+" Change directory to that of current file
 set autochdir
 
 set encoding=utf8
