@@ -1,0 +1,21 @@
+[ui]
+merge = meld
+editor = vim
+
+[tortoisehg]
+vdiff = meld
+editor = gvim
+
+[extensions]
+color = 
+#bookmarks = 
+#hgk = 
+rebase = 
+#record = 
+progress = 
+#pager = 
+graphlog =
+#inotify =
+#transplant =
+
+%include ~/.hgrc.local
