@@ -1,3 +1,4 @@
 ~/.gitconfig:gitconfig
 ~/.vimrc:vimrc
 ~/.tmux.conf:tmux.conf
+~/.bash_aliases:bash_aliases
