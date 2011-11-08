@@ -1,5 +1,4 @@
 set nocompatible
-set t_Co=256
 
 set mouse=a
 
@@ -16,8 +15,16 @@ set title
 syntax on
 
 " Colour scheme
-colorscheme desert256
-hi Normal ctermfg=251 ctermbg=234
+colorscheme desert
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
+endif
+
+if &t_Co == 256
+  colorscheme desert256
+  hi Normal ctermfg=251 ctermbg=234
+endif
 
 " Change directory to that of current file
 set autochdir
@@ -26,6 +33,7 @@ set encoding=utf8
 
 " List chars
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list
 
 
 " Rulers, etc
@@ -38,9 +46,42 @@ set nolinebreak
 set laststatus=2
 set showtabline=2
 
+set nowrap
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+
+set foldmethod=indent
+set foldlevel=1
+
+fun! ToggleFold()
+  if foldlevel('.') == 0
+  normal! l
+  else
+  if foldclosed('.') < 0
+  . foldclose
+  else
+  . foldopen
+  endif
+  endif
+  " Clear status line
+  echo
+  endfun
+  " Map this function to Space key.
+  noremap <space> :call ToggleFold()<CR>
+
+
 " Mappings for tabs
 map <C-t> <Esc>:tabnew<CR>
 map <C-r> <Esc>:tabNext<CR>
+
+"if &loaded_nerd_tree == 1
+  map <F3> :NERDTreeToggle<CR>
+  autocmd VimEnter * NERDTree
+  autocmd VimEnter * wincmd p
+"endif
 
 " Save a file using root (whee!)
 cabbr w!! w !sudo tee % > /dev/null<CR>:e!<CR><CR>
@@ -49,5 +90,5 @@ set wildmenu
 set wildmode=list:longest
 set wildignore=*.o
 
-set backupdir=~/Temp/Vim/Backups
-set directory=~/Temp/Vim/Swaps
+"set backupdir=~/Temp/Vim/Backups
+"set directory=~/Temp/Vim/Swaps
