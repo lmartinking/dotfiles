@@ -10,7 +10,7 @@ noremap <LeftDrag> <LeftMouse>
 noremap! <LeftDrag> <LeftMouse>
 
 "set ttymouse=xterm2
-"set ttymouse=xterm
+set ttymouse=xterm
 
 set title
 
