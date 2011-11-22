@@ -3,3 +3,4 @@
 ~/.tmux.conf:tmux.conf
 ~/.bash_aliases:bash_aliases
 ~/.config/user-dirs.dirs:config-user-dirs.dirs
+~/.hgrc:hgrc
