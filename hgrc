@@ -11,11 +11,12 @@ color =
 #bookmarks = 
 #hgk = 
 rebase = 
-#record = 
+record =
 progress = 
 #pager = 
 graphlog =
 #inotify =
 #transplant =
+mq=
 
 %include ~/.hgrc.local
