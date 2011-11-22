@@ -2,11 +2,14 @@ export PATH="$HOME/scripts:$HOME/bin:$PATH"
 
 if [[ $- == *i* ]] ; then
 # Alises if shell is interactive
+export PATH="/usr/lib/cw:$PATH"
 
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 
-export PATH="/usr/lib/cw:$PATH"
+alias hgs='hg --color=yes status | grep -v "? "'
+alias hgl='hg --color=yes log | less -r'
+alias hgd='hg --color=yes diff | less -r'
 
 man() {
 	env \
