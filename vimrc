@@ -33,8 +33,13 @@ set encoding=utf8
 
 " List chars
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-set list
+noremap <F4> :set list!<CR>
 
+" Toggle Hilighted Search
+nmap <F5> :set hls!<CR>
+
+" Nice easy closing
+map q :NERDTreeClose<CR>:q<CR>
 
 " Rulers, etc
 set ruler
@@ -74,7 +79,9 @@ fun! ToggleFold()
 
 
 " Mappings for tabs
-map <C-t> <Esc>:tabnew<CR>
+
+" New tab, nerd tree, then change focus
+map <C-t> <Esc>:tabnew<CR>:NERDTreeMirror<CR>:wincmd p<CR>
 map <C-r> <Esc>:tabNext<CR>
 
 "if &loaded_nerd_tree == 1
@@ -86,9 +93,9 @@ map <C-r> <Esc>:tabNext<CR>
 " Save a file using root (whee!)
 cabbr w!! w !sudo tee % > /dev/null<CR>:e!<CR><CR>
 
-set wildmenu
-set wildmode=list:longest
-set wildignore=*.o
+"set wildmenu
+"set wildmode=list:longest
+"set wildignore=*.o
 
 "set backupdir=~/Temp/Vim/Backups
 "set directory=~/Temp/Vim/Swaps
