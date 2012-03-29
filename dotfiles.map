@@ -5,3 +5,4 @@
 ~/.config/user-dirs.dirs:config-user-dirs.dirs
 ~/.hgrc:hgrc
 ~/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml:gconf-apps-gnome-terminal-profiles-Default-%gconf.xml
+~/.vim/colors/desert256.vim:vim-colors-desert256.vim
