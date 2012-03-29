@@ -10,6 +10,9 @@ alias grep='grep --colour=auto'
 alias hgs='hg --color=yes status | grep -v "? "'
 alias hgl='hg --color=yes log | less -r'
 alias hgd='hg --color=yes diff | less -r'
+alias hgi='hg --color=yes incoming'
+alias hgps='hg --color=yes push'
+alias hgpl='hg --color=yes pull'
 
 man() {
 	env \
