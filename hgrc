@@ -7,6 +7,7 @@ vdiff = meld
 editor = gvim
 
 [extensions]
+fetch =
 color = 
 #bookmarks = 
 #hgk = 
@@ -16,7 +17,10 @@ progress =
 #pager = 
 graphlog =
 #inotify =
-#transplant =
+transplant =
 mq=
 
 %include ~/.hgrc.local
+
+#[web]
+#cacerts=
