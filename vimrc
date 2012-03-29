@@ -4,13 +4,14 @@ call pathogen#helptags()
 set nocompatible
 
 set mouse=a
+set ttymouse=xterm2
+set ttyfast
 
 " disable visual mode through the mouse (very annoying)
 noremap <LeftDrag> <LeftMouse>
 noremap! <LeftDrag> <LeftMouse>
 
-"set ttymouse=xterm2
-set ttymouse=xterm
+"set ttymouse=xterm
 
 set title
 
